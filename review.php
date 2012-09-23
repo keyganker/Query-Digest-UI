@@ -299,7 +299,7 @@
                             <?php
                                 foreach ($host['databases'] AS $database) {
                                     ?>
-                                        <option value="<?php echo "$label.$database"; ?>"> <?php echo "$label.$database"; ?></option>
+                                        <option value="<?php echo "`$label`.`$database`"; ?>"> <?php echo "`$label`.`$database`"; ?></option>
                                     <?php
                                 }
                                 ?>

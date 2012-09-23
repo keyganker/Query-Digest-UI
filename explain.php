@@ -39,7 +39,9 @@
 		$return['Warnings'][] = array('Code' => '0', 'Level' => 'Error', 'Message' => "I can't explain this type of query yet");
 	}
 	else {
-		list($label, $database) = explode('.', $_REQUEST['explainDb']);
+		list($label, $database) = explode('`.`', $_REQUEST['explainDb']);
+		$label = str_replace('`', '', $label);
+		$database = str_replace('`', '', $database);
 		$host = $explainhosts[$label];
 		Database::connect(null, $host['user'], $host['password'], null, null, 'pdo', array('dsn' => $host['dsn']), $label);
 		Database::find($label)->query('USE '.Database::escapeField($database));
