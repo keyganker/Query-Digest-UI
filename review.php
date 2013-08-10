@@ -136,7 +136,7 @@
 
     if (@$_REQUEST['Review'] == 'Review' ) {
         Database::find('review')->query(
-            'UPDATE review
+            'UPDATE '.Database::escapeField($reviewhost['review_table']).'
                 SET reviewed_by = ?,
                     reviewed_on = NOW(),
                     comments    = ?
