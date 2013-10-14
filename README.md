@@ -19,3 +19,7 @@ Install
 ====
 Clone to a docroot, copy config.php.example to config.php and edit.
 Head to the root url in your browser and away you go!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kormoc/query-digest-ui/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
