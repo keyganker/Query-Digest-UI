@@ -20,6 +20,7 @@ Install
 Clone to a docroot, copy config.php.example to config.php and edit.
 Head to the root url in your browser and away you go!
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kormoc/query-digest-ui/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Import slow log
+====
+pt-query-digest --user={username} --password={password} --review h={db host},D=slow_query_log,t=global_query_review --history h={db host},D=slow_query_log,t=global_query_review_history --no-report --limit=0% --filter=" \$event->{Bytes} = length(\$event->{arg}) and \$event->{hostname}=\"$HOSTNAME\"" {PATH_TO_SLOW_LOG}
 
